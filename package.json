@@ -1,0 +1,47 @@
+{
+  "name": "node-nuxt-template",
+  "version": "0.0.1",
+  "description": "A node template for vue and nuxt development",
+  "repository": "https://github.com/lgou2w/node-nuxt-template.git",
+  "author": "lgou2w <lgou2w@hotmail.com>",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf .nuxt dist",
+    "dev": "cross-env NODE_ENV=development nodemon src/server/index.js --watch src/server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.9.4",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "cross-env": "^5.2.1",
+    "express": "^4.17.1",
+    "nuxt": "^2.11.0",
+    "vue": "^2.6.11",
+    "vue-class-component": "^7.2.2",
+    "vue-property-decorator": "^8.3.0",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@nuxt/typescript-build": "^0.5.6",
+    "@nuxtjs/eslint-config": "^1.1.2",
+    "@nuxtjs/eslint-module": "^1.1.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-nuxt": ">=0.5.0",
+    "nodemon": "^1.19.4",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "rimraf": "^3.0.1",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "typescript": "^3.7.5",
+    "vue-loader": "^15.8.3",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
