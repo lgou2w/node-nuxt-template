@@ -8,9 +8,9 @@
   "private": true,
   "scripts": {
     "clean": "rimraf .nuxt dist",
-    "dev": "cross-env NODE_ENV=development nodemon src/server/index.js --watch src/server",
+    "dev": "cross-env NODE_ENV=development nodemon --exec \"ts-node -P tsconfig.server.json server/index.ts\" --watch server --ext js,ts,json",
     "build": "nuxt build",
-    "start": "cross-env NODE_ENV=production node server/index.js",
+    "start": "cross-env NODE_ENV=production ts-node -P tsconfig.server.json server/index.ts",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
@@ -21,15 +21,19 @@
     "cross-env": "^5.2.1",
     "express": "^4.17.1",
     "nuxt": "^2.11.0",
+    "ts-node": "^8.6.2",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.2",
     "vue-property-decorator": "^8.3.0",
-    "vuex": "^3.1.2"
+    "vuex": "^3.1.2",
+    "vuex-class": "^0.3.2"
   },
   "devDependencies": {
+    "@nuxt/typescript": "^2.8.1",
     "@nuxt/typescript-build": "^0.5.6",
     "@nuxtjs/eslint-config": "^1.1.2",
     "@nuxtjs/eslint-module": "^1.1.0",
+    "@types/node": "^13.7.0",
     "@typescript-eslint/parser": "^2.18.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",

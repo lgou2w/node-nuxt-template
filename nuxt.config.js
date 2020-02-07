@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'universal',
-  srcDir: 'src/',
+  srcDir: 'client/',
   dir: {
     assets: 'assets',
     layouts: 'layouts',

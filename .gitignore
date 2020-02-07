@@ -135,5 +135,3 @@ node_modules
 
 # Vue env
 !.env
-!.env.development
-!.env.production
